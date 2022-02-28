@@ -8,7 +8,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
-import hu.bme.mit.train.tachograph;
+import hu.bme.mit.train.tachograph.Tachograph;
 
 
 public class TrainSystemTest {
@@ -23,8 +23,9 @@ public class TrainSystemTest {
 
 	@Test(expected = Test.None.class)
 	public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() {
-			tachograph.put(10);
-			tachograph.put(20);
+			tachograph.record(10);
+			tachograph.record(20);
+			Assert.assertEquals(tachograph.any(), true);
 	}
 
 	
