@@ -1,7 +1,8 @@
 package hu.bme.mit.train.tachograph;
 
 import hu.bme.mit.train.system.TrainSystem;
-import hu.bme.mit.train.user.
+import hu.bme.mit.train.controller.TrainController;
+import hu.bme.mit.train.user.TrainUser;
 import com.google.common.collect.*;
 
 
