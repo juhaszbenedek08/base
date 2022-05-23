@@ -1,5 +1,8 @@
 package hu.bme.mit.train.system;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import hu.bme.mit.train.controller.TrainControllerImpl;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
@@ -25,4 +28,13 @@ public class TrainSystem {
 		return user;
 	}
 
+	public void run(){
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run(){
+				getController().setJoystickPosition(getUser().getJoystickPosition());
+			} 			
+		}, 500); 
+	} 
 }
