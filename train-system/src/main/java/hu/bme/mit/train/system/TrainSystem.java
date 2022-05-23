@@ -35,7 +35,7 @@ public class TrainSystem {
 			public void run() {
 				controller.setJoystickPosition(user.getJoystickPosition());
 			}
-		}, 1000);
+		}, 500);
 	}
 
 }
